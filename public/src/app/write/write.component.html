@@ -1,0 +1,9 @@
+<div>
+    <p>AAdd a quote for {{quoteAuthor.name}}</p>
+        <p>{{status}}</p>
+        <form (submit)="createQuote()">
+        <input type="text" name="quote.quote" [(ngModel)]="quote.quote">
+        <button type="submit">Submit</button>
+        </form>
+        <a [routerLink]="['../../quotes']">Go back!</a>
+    </div>

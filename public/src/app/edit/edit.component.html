@@ -1,0 +1,8 @@
+<div>
+    <p>{{status}}</p>
+    <form (submit)="editAut(author)">
+    <input type="text" name="author.name" [(ngModel)]="author.name">
+    <button type="submit">Submit</button>
+    </form>
+    <a [routerLink]="['../authors']">Go back!</a>
+</div>

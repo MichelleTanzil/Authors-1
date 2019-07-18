@@ -1,0 +1,16 @@
+<div>
+    <h3>Quote Ranks</h3>
+    <button [routerLink]="['../../authors']">Go back!</button>
+    <p>{{author.name}}</p>
+    <button [routerLink]="['../../write',author._id]">Add a quote</button>
+    <div *ngFor="let quote of author.quotes">
+        <p>{{quote.quote}}</p>
+        <p>{{quote.rank}}</p>
+        <form (submit)="voteQute(quote._id, 'up')">
+            <button>UP</button>
+        </form>
+        <form (submit)="voteQute(quote._id, 'down')">
+            <button>DOWN</button>
+        </form>
+    </div>
+</div>

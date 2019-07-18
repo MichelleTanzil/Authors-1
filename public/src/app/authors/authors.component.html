@@ -1,0 +1,12 @@
+<div>
+    <button [routerLink]="['../author/new']">Add new Author</button>
+</div>
+
+<div *ngFor="let x of authors" >
+    <p>{{x.name}}</p>
+    <form (submit)="onDelete(x._id)">
+        <button>Delete</button>
+    </form>
+    <button [routerLink]="['../author/', x._id]">Edit</button>
+    <button [routerLink]="['../quote/', x._id]">View Quotes</button>
+</div>
